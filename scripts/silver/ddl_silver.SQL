@@ -12,6 +12,7 @@ Run this script to re-define the DDL structre of 'silver'; table.
 IF OBJECT_ID ('silver.crm_cust_info', 'U') IS NOT NULL
 DROP TABLE silver.crm_cust_info;
 
+GO
 CREATE TABLE silver.crm_cust_info(
 cst_id INT,
 cst_key NVARCHAR(50),
@@ -23,7 +24,7 @@ cst_create_date DATE,
 dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 
-
+GO
 IF OBJECT_ID ('silver.crm_prd_info', 'U') IS NOT NULL
 DROP TABLE silver.crm_prd_info;
 
@@ -38,7 +39,7 @@ prd_end_dt DATETIME,
 dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 
-
+GO
 IF OBJECT_ID ('silver.crm_sales_details', 'U') IS NOT NULL
 DROP TABLE silver.crm_sales_details;
 
@@ -55,7 +56,7 @@ sls_price INT,
 dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 
-
+GO
 IF OBJECT_ID ('silver.erp_loc_a101', 'U') IS NOT NULL
 DROP TABLE silver.erp_loc_a101;
 
@@ -76,7 +77,7 @@ gen NVARCHAR(50),
 dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 
-
+GO
 IF OBJECT_ID ('silver.erp_px_cat_g1v2', 'U') IS NOT NULL
 DROP TABLE silver.erp_px_cat_g1v2;
 
